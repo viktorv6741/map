@@ -129,31 +129,6 @@ public class MyHashMap<K, V> {
         return h ^ (h >>> 7) ^ (h >>> 4);
     }
 
-  /*  public MyEntry<K, V> remove(K key) {
-
-        int newPositionHash = hash(key);
-        int index = indexFor(newPositionHash);
-
-        MyEntry<K, V> previous = elements[index];
-        MyEntry<K, V> current = elements[index];
-
-
-        while (!(current.key.equals(key))) {
-            if (current.next == null) {
-                return null;
-            } else {
-                previous = current;
-                current = current.next;
-            }
-        }
-        if (current == elements[index]) {
-            elements[index] = elements[index].next;
-        } else {
-            previous.next = current.next;
-        }
-        return current;
-    }*/
-
     public void remove(K key) {
         try {
             int newPositionHash = hash(key);
